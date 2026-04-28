@@ -1,0 +1,168 @@
+Build a full-stack web application called “ClosetCycle” — a coordinator-managed clothing redistribution platform that connects people who want to donate unused clothes with people who need affordable or free clothing.
+
+## 🎯 Core Goal
+Reduce textile waste and enable affordable clothing access using a simple, coordinator-driven system instead of forcing all users to adopt complex apps.
+
+---
+
+## 👥 User Roles
+1. Donor (people giving clothes)
+2. Receiver (people browsing and taking clothes)
+3. Coordinator (admin managing inventory, approvals, and logistics)
+
+---
+
+## 🧩 Key Features
+
+### 1. Donor Flow (Simple UX)
+- Donor submits clothes via:
+  - Form (name, phone, item type, size, condition)
+  - Upload images (multiple)
+- Option: “Submit via WhatsApp” (simulate with button or API placeholder)
+- No login required (keep it frictionless)
+
+---
+
+### 2. Coordinator Dashboard (Core System)
+- Secure login for coordinator
+- Features:
+  - View all submitted clothes
+  - Approve / reject items
+  - Categorize items:
+    - Type (shirt, jeans, kurta, etc.)
+    - Size (S, M, L, XL)
+    - Gender category
+    - Condition (new, lightly used)
+  - Upload approved items to public catalog
+  - Manage orders/reservations
+  - Track inventory status (available / reserved / delivered)
+
+---
+
+### 3. Receiver Flow
+- Browse clothing catalog
+- Filters:
+  - Size
+  - Category
+  - Gender
+  - Price (free / low cost)
+- View item details:
+  - Images
+  - Description
+  - Condition
+- Reserve item
+- Option for:
+  - Pickup
+  - Delivery (mocked)
+
+---
+
+### 4. Smart Features (Important)
+- Basic recommendation system:
+  - Show “You may also like” based on selected items
+- Bundle suggestion:
+  - Suggest “3 items for ₹X” to clear inventory faster
+
+---
+
+### 5. Order System
+- Receivers can:
+  - Add items to cart
+  - Reserve items
+- Coordinator confirms and updates status
+
+---
+
+## 🧠 Design Principles
+- Keep donor experience extremely simple (no login)
+- Focus complexity on coordinator dashboard
+- Mobile-first responsive design
+- Clean, minimal UI
+
+---
+
+## 🎨 UI Requirements
+- Modern card-based layout for clothes
+- Dashboard with sidebar navigation
+- Use clear tags (size, condition, category)
+- Add sustainability-themed colors (green, beige, white)
+
+---
+
+## ⚙️ Tech Stack
+Frontend:
+- React (Next.js preferred)
+- Tailwind CSS
+
+Backend:
+- Node.js or built-in backend
+- REST APIs
+
+Database:
+- Supabase or Firebase
+
+Storage:
+- Image upload support
+
+---
+
+## 🔐 Authentication
+- Only coordinator needs login (JWT or Firebase Auth)
+
+---
+
+## 📊 Data Models
+
+Clothing Item:
+- id
+- title
+- category
+- size
+- gender
+- condition
+- images
+- price
+- status (pending, approved, reserved, delivered)
+
+User (optional for receiver):
+- id
+- name
+- phone
+
+Order:
+- id
+- items
+- user info
+- status
+
+---
+
+## 🚀 MVP Scope (1-week build)
+- Donor submission form
+- Coordinator approval dashboard
+- Public catalog
+- Reservation system
+
+---
+
+## 🌍 Future Scope (just outline, don’t build fully)
+- AI-based recommendation engine
+- Demand prediction
+- Logistics optimization
+- NGO integration
+
+---
+
+## 🧪 Deliverables
+- Fully working web app
+- Clean UI
+- Sample dummy data
+- Simple deployment (Vercel or similar)
+
+---
+
+## 💡 Extra Instructions
+- Use reusable components
+- Keep code clean and modular
+- Add comments for clarity
+- Include a short README explaining features
